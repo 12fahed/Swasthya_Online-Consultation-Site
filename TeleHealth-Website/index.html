@@ -8,18 +8,33 @@
         <link rel="stylesheet" type= "text/css" href="vendors/css/ionicons.min.css">
         <link href="https://fonts.googleapis.com/css?family=Lato:100,300,300i,400" rel="stylesheet"> 
         
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Arbutus+Slab&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="resources/css/footer.css">
         
-        <title>TeleHealth</title>
+        <script src="https://kit.fontawesome.com/2839c03294.js" crossorigin="anonymous"></script>
+        <title>Swasthya</title>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="description" content="An interactive getting started guide for Brackets.">
+
+        <style>
+            *{
+                font-family: 'Arbutus Slab', serif;
+            }
+
+        </style>
+
+
     </head>
     
     <body>
         <header>
+
             <nav>
                 <div class="row">
-                    <img src="resources/css/img/SNS_Logo.png" alt="Telehealth Logo" class="logo">
+                    <img src="resources/img/logo.png" alt="Swasthya Logo" class="logo" style="height: 200px;" >
                     <ul class="main-nav">
                         <li><a href="#">BENEFITS</a></li>
                         <li><a href="#">INITIATIVES</a></li>
@@ -27,23 +42,35 @@
                         <li><a href="#">LATEST NEWS</a></li>
                         <li><a href="#">CONTACT US</a></li>
                     </ul>
+                    
                 </div>
             </nav>
-            <div class="hero-text-box">
-                <h1>TeleHealth</h1>
-                <h2>Integrated and Seamless<br> Healthcare Services at Home</h2>
-                <a class="btn button-full" href="#">How can I help?</a>
-                <a class="btn button-ghost" href="#">Find out more</a>
-            </div>
+
+
+
         </header>
         
+        <div class="container">
+            <div class="hero-text-box">
+                <!-- Add a span element to wrap each letter of the title -->
+                <h1 style="color: #28844B; font-size: 70px;"><span id="typewriter">S</span><span id="typewriter">w</span><span id="typewriter">a</span><span id="typewriter">s</span><span id="typewriter">t</span><span id="typewriter">h</span><span id="typewriter">y</span><span id="typewriter">a</span></h1>
+                <!-- Remaining content -->
+                <br><br>
+                <h2>Integrated and Seamless<br> Healthcare Services at Home</h2>
+                <br>
+                <a class="btn button-full" href="#">Get Started</a>
+                <a class="btn button-ghost" href="#">Find out more</a>
+                <a class="btn button-ghost" href="#" style="margin-left: 20px;">How can I help?</a>
+            </div>
+        </div>
+
         <section class="section-benefits">
             <div class="row">
                 <h3>
-                    WHAT'S SO GOOD ABOUT TELEHEALTH?
+                    WHAT'S SO GOOD ABOUT Swasthya?
                 </h3>
                 <p class="long-copy">
-                    By bringing care into the home, TeleHealth enhances your access to healthcare and improves productivity in our healthcare system. So rest assured, whoever you are, whatever you do, TeleHealth promises wonderful benefits for you!
+                    By bringing care into the home, Swasthya enhances your access to healthcare and improves productivity in our healthcare system. So rest assured, whoever you are, whatever you do, Swasthya promises wonderful benefits for you!
                 </p>
             </div>
             
@@ -173,6 +200,147 @@
             </div>
         </section>
      
+        <section class="footer">
+
+            <div class="box-container">
         
+        
+                <div class="box">
+                    <h3><strong>Find Us Here</strong></h3>
+                    
+                    <div style="border: 2px #004D49; border-style: dotted;">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3770.983347746455!2d72.83328527495452!3d19.064469752334894!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c91130392c07%3A0x3c47bf391c8de931!2sThadomal%20Shahani%20Engineering%20College!5e0!3m2!1sen!2sin!4v1697261022269!5m2!1sen!2sin" height="400" width="1200" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                      </div>
+                     
+                    <p>Opp Thadomal Shahani Engineering College, Linking Road, Bandra (W), Mumbai-50</p>
+        
+                </div>
+        
+                <div style="padding: 20%; padding-top: 10%;">
+                    <div class="box">
+        
+                        <div class="box">
+                            <h3><strong>Contact us</strong></h3>
+                            <a href="tel:+91 98765 43210" target="_blank" class="link" style="text-decoration: none;">+91 98765 43210</a>
+                            <a href="mailto:swastya@gmail.com" target="_blank" class="link" style="text-decoration: none;">swasthya@gmail.com</a>
+                        </div>
+        
+                        <br><br><br><br>
+                        <h3><strong>Social Media</strong></h3>
+                        <div class="share">
+                            <a href="#" class="fab fa-facebook-f"></a>
+                            <a href="#" class="fab fa-twitter"></a>
+                            <a href="#" class="fab fa-instagram"></a>
+                            <a href="#" class="fab fa-linkedin"></a>
+                        </div>
+        
+                    </div>
+                </div>
+            </div>
+    
+            <div class="credit">created by <span><strong style="font-size: 50px; font-family: 'Times New Roman', Times, serif;">  Swasthya </strong></span>| All rights are reserved!</div>
+           
+        </section>
+
     </body>
+
+    <script>
+        // JavaScript code to implement the typewriter effect
+    document.addEventListener("DOMContentLoaded", function () {
+    // Array to store all the spans containing each letter of the title
+    var titleLetters = document.querySelectorAll("#typewriter");
+
+    // Delay between displaying each letter (in milliseconds)
+    var typingSpeed = 200;
+
+    // Function to animate the title letters
+    function typeWriter() {
+        // Loop through each letter and display it with a delay
+        for (var i = 0; i < titleLetters.length; i++) {
+            setTimeout(function (index) {
+                return function () {
+                    titleLetters[index].style.opacity = 1; // Make the letter visible
+                };
+            }(i), i * typingSpeed);
+        }
+    }
+
+    // Start the typewriter effect when the page is loaded
+    typeWriter();
+});
+
+    </script>
+    
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+    // Add fade-in animation to hero section
+    var heroTextBox = document.querySelector(".hero-text-box");
+    heroTextBox.classList.add("fadeIn");
+
+    // Add slide-in animation to benefits section when it enters the viewport
+    window.addEventListener("scroll", function() {
+        var benefitBoxes = document.querySelectorAll(".section-benefits .box");
+        benefitBoxes.forEach(function(box) {
+            if (isElementInViewport(box) && !box.classList.contains("visible")) {
+                box.classList.add("visible");
+            }
+        });
+    });
+
+    // Check if element is in viewport
+    function isElementInViewport(el) {
+        var rect = el.getBoundingClientRect();
+        return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+    }
+});
+
+    </script>
+    
+    <script>
+
+    document.addEventListener("DOMContentLoaded", function() {
+        // Add fade-in animation to hero section
+        var heroTextBox = document.querySelector(".hero-text-box");
+        heroTextBox.classList.add("fadeIn");
+
+        // Add slide-in animation to benefits section when it enters the viewport
+        var benefitBoxes = document.querySelectorAll(".section-benefits .box");
+        window.addEventListener("scroll", function() {
+            benefitBoxes.forEach(function(box) {
+                if (isElementInViewport(box) && !box.classList.contains("visible")) {
+                    box.classList.add("visible");
+                }
+            });
+        });
+
+        // Add slide-in animation to application section when it enters the viewport
+        var applicationBoxes = document.querySelectorAll(".section-application .steps-box");
+        window.addEventListener("scroll", function() {
+            applicationBoxes.forEach(function(box) {
+                if (isElementInViewport(box) && !box.classList.contains("visible")) {
+                    box.classList.add("visible");
+                }
+            });
+        });
+
+        // Check if element is in viewport
+        function isElementInViewport(el) {
+            var rect = el.getBoundingClientRect();
+            return (
+                rect.top >= 0 &&
+                rect.left >= 0 &&
+                rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+                rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            );
+        }
+    });
+
+
+    </script>
+
 </html>

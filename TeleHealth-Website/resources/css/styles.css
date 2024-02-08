@@ -163,7 +163,7 @@ input[type="submit"]:active { border: 2px solid #1f74ac; }
 /* Header styles
    ==========================================*/
 header {
-	background-image: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url(img/hero.jpg);
+	background-image: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.65)), url(/TeleHealth-Website/resources/img/bg-landing.png);
 	background-size: cover;
 	background-position: center;
 	height: 100vh; /* 100% of the viewport's height */
@@ -344,3 +344,51 @@ input[type="checkbox"] { margin: 10px 5px 10px 0; }
 	font-size: 1.6em;
 }
 
+/* Your existing CSS styles */
+
+/* Hide all but the first letter of the title initially */
+#typewriter:not(:first-child) {
+    opacity: 0;
+}
+
+/* Fade-in animation for hero section */
+.hero-text-box {
+    opacity: 0;
+    /* transform: translateY(-20px); */
+    animation: fadeIn 1s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        /* transform: translateY(-20px); */
+    }
+    100% {
+        opacity: 1;
+        /* transform: translateY(0); */
+    }
+}
+
+/* Slide-in animation for benefits section */
+.section-benefits .box {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.section-benefits .box.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+            /* Slide-in animation for application section */
+            .section-application .steps-box {
+                opacity: 0;
+                transform: translateY(50px);
+                transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+            }
+
+            .section-application .steps-box.visible {
+                opacity: 1;
+                transform: translateY(0);
+            }
